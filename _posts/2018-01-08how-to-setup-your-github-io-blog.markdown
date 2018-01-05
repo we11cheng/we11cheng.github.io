@@ -1,3 +1,16 @@
+---
+layout:     post
+title:      "Hello 2015"
+subtitle:   " \"Hello World, Hello Blog\""
+date:       2018-01-05 14:00:00
+author:     "Hux"
+header-img: "img/post-bg-2015.jpg"
+catalog: true
+---
+
+> “Yeah It's on. ”
+
+
 ## 前言
 
 Hux 的 Blog 就这么开通了。
@@ -63,5 +76,6 @@ Theme 的 CSS 是基于 Bootstrap 定制的，看得不爽的地方直接在 Les
 如果你恰好逛到了这里，希望你也能喜欢这个博客主题。
 
 —— Hux 后记于 2015.10
+
 
 
