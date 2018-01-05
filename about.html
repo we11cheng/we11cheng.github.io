@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "About"
+title: "关于"
 description: "一生想做浪漫极客"
 header-img: "img/about-bg.jpg"
 ---
@@ -17,9 +17,9 @@ header-img: "img/about-bg.jpg"
 </script>
 
 <div class="zh post-container">
-    {% capture about_zh %}{% include about/zh.md %}{% endcapture %}
     {{ about_zh | markdownify }}
 </div>
+
 {% if site.disqus_username %}
 
 <!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
