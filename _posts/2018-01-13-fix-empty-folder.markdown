@@ -13,7 +13,7 @@ header-img: "img/gwc_sea.jpg"
 
 简单介绍一下解决方案。
 
-需要注意的一点就是在哪个路径下创建.gitignore文件（在你空白文件夹下面创建)[](http://p2bzzkn05.bkt.clouddn.com/18-1-13/40809453.jpg)如图gwc文件夹就是我们空白的文件夹。在mac系统下.后缀表示是隐藏文件夹。创建的方式有很多，可以通过终端 touch [文件名+后缀] 或者vim [文件名+后缀]来操作。推荐大家使用vim编辑器，用久了绝对会爱上它。然后在.gitignore 输入以下内容
+需要注意的一点就是在哪个路径下创建.gitignore文件（在你空白文件夹下面创建)![](http://p2bzzkn05.bkt.clouddn.com/18-1-13/40809453.jpg)如图gwc文件夹就是我们空白的文件夹。在mac系统下.后缀表示是隐藏文件夹。创建的方式有很多，可以通过终端 touch [文件名+后缀] 或者vim [文件名+后缀]来操作。推荐大家使用vim编辑器，用久了绝对会爱上它。然后在.gitignore 输入以下内容
 ```
 # Ignore everything in this directory
 *
