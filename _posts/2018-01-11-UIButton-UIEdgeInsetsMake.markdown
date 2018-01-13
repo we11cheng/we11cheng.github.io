@@ -7,7 +7,7 @@ author:     "管维诚"
 header-img: "img/post-bg-rwd.jpg"
 ---
 
-### 首先简单介绍一下UIButton UIEdgeInsetsMake的用法。
+#### 首先简单介绍一下UIButton UIEdgeInsetsMake的用法。
 #### UIButton.h
 ```objc
 @property(nonatomic)          UIEdgeInsets titleEdgeInsets;                // default is UIEdgeInsetsZero
@@ -21,7 +21,7 @@ typedef struct UIEdgeInsets {
 ```
 #### Edge字面意思就是表示四个边距。所以我们可以通过更改UIButton的imageEdgeInsets、titleEdgeInsets来实现按钮image和title的各种样式。为了便于使用。我们将实现封装在UIButton category中。详见代码
 
-##### UIButton+WCButtonWithEdgeInset.m 文件
+#### UIButton+WCButtonWithEdgeInset.m 文件
 
 ```objc
 #import <UIKit/UIKit.h>
@@ -40,7 +40,7 @@ typedef NS_ENUM(NSUInteger, WCButtonEdgeInsetsStyle) {
 
 @end
 ```
-##### UIButton+WCButtonWithEdgeInset.m 文件
+#### UIButton+WCButtonWithEdgeInset.m 文件
 ```objc
 #import "UIButton+WCButtonWithEdgeInset.h"
 
@@ -97,7 +97,7 @@ typedef NS_ENUM(NSUInteger, WCButtonEdgeInsetsStyle) {
 
 @end
 ```
-##### 具体使用及效果
+#### 具体使用及效果
 
 ```objc
 UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -109,11 +109,11 @@ UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     [button wcButtonWithEdgeInsetsStyle:WCButtonEdgeInsetsStyleRight imageTitleSpace:15];
     [self.view addSubview:button];
 ```
-这个方法需要在设置图片和文字之后才可以调用，且button的大小要大于 图片大小+文字大小+space。
+#### 这个方法需要在设置图片和文字之后才可以调用，且button的大小要大于 图片大小+文字大小+space。
 #### 效果图
-##### 图片在上
+#### 图片在上
 ![图片在上](http://p2bzzkn05.bkt.clouddn.com/18-1-11/77787130.jpg)
-##### 图片在左
+#### 图片在左
 ![](http://p2bzzkn05.bkt.clouddn.com/18-1-11/72999315.jpg)
 #### 图片在下
 ![](http://p2bzzkn05.bkt.clouddn.com/18-1-11/54002071.jpg)
