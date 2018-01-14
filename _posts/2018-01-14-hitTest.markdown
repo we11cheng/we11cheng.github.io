@@ -25,5 +25,6 @@ header-img: "img/gwc_sea.jpg"
 
 * 最终，这个触摸事件交给主窗口的hitTest:withEvent:方法返回的视图对象去处理。
 
-#### 写了一个简单demo，重写自定义视图hitTest:withEvent:方法，地址: <https://github.com/we11cheng/WCHitTest>
+ 写了一个简单demo，重写自定义视图hitTest:withEvent:方法，地址: 
+ <https://github.com/we11cheng/WCHitTest>
 
