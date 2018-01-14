@@ -219,5 +219,4 @@ Example
 ~This is a strikethrough~
 
 markdown原文地址：<br> <https://github.com/we11cheng/WCHitTest/blob/master/markdown.text>
-<br>
-参考链接：<http://itmyhome.com/markdown/article/about/readme.html>
+<br>参考链接：<http://itmyhome.com/markdown/article/about/readme.html>
