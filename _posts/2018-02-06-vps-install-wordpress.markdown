@@ -17,7 +17,6 @@ header-img: "img/post-bg-universe.jpg"
 * 2 获取服务器IP和端口号。![](http://p2bzzkn05.bkt.clouddn.com/18-2-6/82357460.jpg)
 * 3 利用Mac自带应用Terminal SSH 登录远端VPS（购买VPS的时候SSH登录密码会以邮件的方式的给你，当然然kiWiVM面板也能修改Root密码）。![](http://p2bzzkn05.bkt.clouddn.com/18-2-6/55737477.jpg)如图所以表示已经登录成功。
 * 4 在[root@localhost ~]#后面复制粘贴下面命令，并按回车后，就开始自动下载并安装面板了。
-
 >yum install -y wget && wget -O install.sh http://download.bt.cn/install/install.sh && sh install.sh
   
 * 5 安装过程一路continue。安装完成以后。**Bt-Panel** **username** **password** 需要记录一下。
