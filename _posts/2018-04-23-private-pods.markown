@@ -7,15 +7,9 @@ author:     "管维诚"
 header-img: "img/gwc_sea.jpg"
 ---
 
-CocoaPods的出现极大的减轻了我们日常开发的工作量，特别是在做一些繁琐的配置上面，正如CocoaPods官网上面的Get on with building your app, not duplicating code.这句话一样CocoaPods让我们把精力放在打磨我们的产品，而不是把时间浪费在做一些重复的事情上面。
-
-在开发项目的过程中引入第三方代码库会涉及到许多内容。有的时候需要配置build phases和linker flags，这样的细节配置会引起许多人为因素的错误导致整个项目无法正常编译。CocoaPods的出现简化了这些，它能够自动配置编译选项。另外，通过CocoaPods的搜索功能，可以很方便的查找和使用第三方库文件。
-
-一直想把公司的项目中常用到的一些代码提取出来做成公用的库(同一套代码每个项目中都基本上会用到，而且每次改动之后所有的项目都需要进行同步修改，特别繁琐)，恰好最近在调整新项目的代码，趁着这个机会就整理了一下代码。因为有些代码是公司级别的所以不能直接使用CocoaPods的Spec，需要把代码托管在公司的内部服务器上面，使用CocoaPod私有的Spec。之前写过一篇笔记《使用CocoaPods管理iOS项目中的依赖库》，介绍如何安装CocoaPods如何在项目中使用。本文主要是介绍如何搭建和使用私有库。
-
 ### 创建私有的Spec仓库
 
-1.在Git上创建Spec仓库
+#### 1.在Git上创建Spec仓库
 
 Spec是Pods索引库，所有公开的Pods都在这个里面，他实际是一个Git仓库remote端 在GitHub上，但是当你使用了Cocoapods后他会被clone到本地的~/.cocoapods/repos目录下，可以进入到这个目录看到master文件夹就是这个官方的Spec Repo了。这个master目录的结构是这个样子的:
 ![](http://p2bzzkn05.bkt.clouddn.com/18-4-23/1469452.jpg)      
@@ -42,26 +36,20 @@ podspec是一个配置文件，该文件描述了一个库是怎样被添加到�
 ![](http://p2bzzkn05.bkt.clouddn.com/18-4-23/99797113.jpg)
 #### 2.提交代码到git服务器
 
-(1)提交代码到远程仓库
 ```
 git add .
-```
 
-```
 git commit -s -m "first commit"
-```
 
-```
 git push origin master
+
+git tag -a 0.1.0 -m 'v1.0.0' HEAD
+
+git push origin tag 1.0.0
+
 ```
-(2)给当前的版本加上tag，提交到远程仓库
 
-```git tag -a 0.1.0 -m 'v1.0.0' HEAD```
-
-```git push origin tag 1.0.0```
-#### 3.编写podspec文件
-
-示例podspec内容如下，建议参考CocoaPods上面的来做，照着那些第三库的podspec文件写就行了。
+#### 3.编写podspec文件，示例podspec内容如下，建议参考CocoaPods上面的来做，照着那些第三库的podspec文件写就行了。
 参照例子
 <https://github.com/we11cheng/pods_test/blob/master/gwc_spec.podspec>
 
@@ -73,7 +61,10 @@ git push origin master
 
 #### 2.提交podspec文件到Spec库
 
-```pod repo push zengjing-spec Foundation-pd.podspec --verbose --sources='git@gitee.com:he11oworld/Specs.git,https://github.com/CocoaPods/Specs' --use-libraries --allow-warnings```
+```
+pod repo push zengjing-spec Foundation-pd.podspec --verbose --sources='git@gitee.com:he11oworld/Specs.git,https://github.com/CocoaPods/Specs' --use-libraries --allow-warnings
+
+```
 
 提交完成之后可以通过```pod search Foundation-pd```检验是否成功：
 
@@ -88,10 +79,8 @@ git push origin master
 
 (4) --use-libraries:表示使用静态库或者是framework，这里主要是解决当我们依赖一些framework库后校验提示找不到库的时候用到。
 
-(5)在Podfile的文件开头加上Spec的地址，然后就可以向以前一样使用了
-```
-source 'https://github.com/CocoaPods/Specs.git'
-```
-```
-source 'git@gitee.com:he11oworld/Specs.git'
-```
+
+```source 'https://github.com/CocoaPods/Specs.git'```
+
+```source 'git@gitee.com:he11oworld/Specs.git'```
+
