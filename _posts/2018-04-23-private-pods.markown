@@ -7,8 +7,11 @@ author:     "管维诚"
 header-img: "img/gwc_sea.jpg"
 ---
 
-### 1.在Git上创建Spec仓库
+### 在Git上创建Spec仓库
+
 #### Spec是Pods索引库，所有公开的Pods都在这个里面，他实际是一个Git仓库remote端 在GitHub上，但是当你使用了Cocoapods后他会被clone到本地的~/.cocoapods/repos目录下，可以进入到这个目录看到master文件夹就是这个官方的Spec Repo了。这个master目录的结构是这个样子的:
+
 ![](http://p2bzzkn05.bkt.clouddn.com/18-4-23/1469452.jpg)      
+
 每次我们在执行pod install或者是pod update的时候都会自动更新这个spec里面的内容，拉取最新的数据回来。然后我们使用pod search的时候就是直接从这个里面进行查询的。
 
