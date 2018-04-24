@@ -37,11 +37,11 @@ podspec是一个配置文件，该文件描述了一个库是怎样被添加到�
 ```
 git add .
 
-git commit -s -m "first commit"
+git commit -m "first commit"
 
 git push origin master
 
-git tag -a 0.1.0 -m 'v1.0.0' HEAD
+git tag -a 1.0.0 -m 'v1.0.0'
 
 git push origin tag 1.0.0
 
