@@ -60,9 +60,10 @@ git push origin tag 1.0.0
 #### 2.提交podspec文件到Spec库
 
 ```
-pod repo push zengjing-spec Foundation-pd.podspec --verbose --sources='git@gitee.com:he11oworld/Specs.git,https://github.com/CocoaPods/Specs' --use-libraries --allow-warnings
+pod repo push Specs Foundation-pd.podspec --verbose --sources='git@gitee.com:he11oworld/Specs.git,https://github.com/CocoaPods/Specs' --use-libraries --allow-warnings
 
 ```
+```Foundation-pd``` 自行替换
 
 提交完成之后可以通过```pod search Foundation-pd```检验是否成功：
 
