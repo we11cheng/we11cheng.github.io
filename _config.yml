@@ -5,7 +5,7 @@ header-img: img/home-bg.jpg
 email: weicheng.guan@qq.com
 description: "记录博客"
 keyword: "ios开发者"
-url: "https://dianziguan.github.io"              # your host, for absolute URL
+url: "https://we11cheng.github.io"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 
